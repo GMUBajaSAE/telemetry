@@ -1,0 +1,47 @@
+<script src="http://cdn.jsdelivr.net/raphael/2.1.2/raphael-min.js"></script>
+<script src="http://cdn.jsdelivr.net/justgage/1.0.1/justgage.min.js"></script>
+
+    <input type="button" id="inc" onClick="inc()" value="increase by 20" />
+    <input type="button" id="dec" onClick="dec()" value="decrease by 20" />
+<br><br>
+    amount to change: <input type="text" id="change" />
+<br>
+    <input type="button" id="incVar" onClick="incVar()" value="increase (variable)" />
+    <input type="button" id="decVar" onClick="decVar()" value="decrese (variable)" />
+
+    <div id="gauge" class="200x160px"></div>
+    <script>
+
+var gageValue = 100;
+
+        var g = new JustGage({
+            id: "gauge",
+            value: gageValue,
+            min: 0,
+            max: 200,
+            title: "Speedometer"
+        });
+
+function updateGage(n) {
+  g.refresh(gageValue + n);
+  gageValue += n;
+}
+
+function inc() {
+  updateGage(20);
+}
+
+function dec() {
+  updateGage(-20);
+}
+
+function incVar() {
+  updateGage(parseInt(document.getElementById("change").value))
+}
+
+function decVar() {
+  updateGage(-parseInt(document.getElementById("change").value))
+}
+
+
+    </script>

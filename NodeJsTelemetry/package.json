@@ -1,0 +1,16 @@
+{
+  "name": "embedded-telemetry",
+  "version": "1.0.0",
+  "description": "wireless telemetry files for GMU Baja SAE",
+  "main": "app.js",
+  "dependencies": {
+    "plotly": "^1.0.6",
+    "serialport": "^4.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GMU Baja SAE",
+  "license": "ISC"
+}
